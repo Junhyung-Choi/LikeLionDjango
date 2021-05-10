@@ -1,3 +1,25 @@
 {% load static %}
 
-<h1>Hello LikeLion!</h1>
+<head>
+    <style>
+        body{text-align: center;}
+        .container{display: flex; justify-content: center;}
+        .box{margin: 30px;}
+    </style>
+</head>
+<body>
+    <h1>MY TEAMMATES</h1>
+    <div class = "container">
+        {% for teammate in teammates %}
+            <div class = "box">
+                {{teammate}}
+                <h3>{{teammate.fullname}}</h3>
+                <p>{{teammate.birthday}}</p>
+                <p>{{teammate.nickname}}</p>
+                <p>{{teammate.introduce}}</p>
+                <p>{{teammate.mbti}}</p>
+                <p>{{teammate.hobby}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>

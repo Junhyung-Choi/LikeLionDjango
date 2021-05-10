@@ -7,7 +7,10 @@ class Blog(models.Model):
     pub_date = models.DateTimeField()
     body = models.TextField()
 
-class Visitor(models.Model):
-    visitor_id = models.CharField(max_length=100)
-    visitor_password = models.CharField(max_length=100)
-    visitor_signupdate = models.DateField()
+class Teammate(models.Model):
+    fullname = models.CharField(max_length=100)
+    birthday = models.DateField()
+    nickname = models.CharField(max_length=100)
+    introduce = models.TextField()
+    mbti = models.CharField(max_length=4)
+    hobby = models.CharField(max_length=100)
