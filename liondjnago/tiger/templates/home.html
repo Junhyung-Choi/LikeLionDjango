@@ -4,21 +4,22 @@
     <style>
         body{text-align: center;}
         .container{display: flex; justify-content: center;}
-        .box{margin: 30px;}
+        .box{margin: 30px; padding: 15px; border: solid; border-color:black;}
     </style>
 </head>
 <body>
-    <h1>MY TEAMMATES</h1>
+    <h1 style="margin: 50px;">MY TEAMMATES</h1>
     <div class = "container">
         {% for teammate in teammates %}
             <div class = "box">
                 {{teammate}}
                 <h3>{{teammate.fullname}}</h3>
+                <p>{{teammate.major}}</p>
                 <p>{{teammate.birthday}}</p>
                 <p>{{teammate.nickname}}</p>
-                <p>{{teammate.introduce}}</p>
                 <p>{{teammate.mbti}}</p>
                 <p>{{teammate.hobby}}</p>
+                <p>{{teammate.favorfood}}</p>
             </div>
         {% endfor %}
     </div>

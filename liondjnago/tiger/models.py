@@ -9,8 +9,9 @@ class Blog(models.Model):
 
 class Teammate(models.Model):
     fullname = models.CharField(max_length=100)
+    major = models.CharField(max_length=100)
     birthday = models.DateField()
     nickname = models.CharField(max_length=100)
-    introduce = models.TextField()
     mbti = models.CharField(max_length=4)
     hobby = models.CharField(max_length=100)
+    favorfood = models.CharField(max_length=100)
